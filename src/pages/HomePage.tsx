@@ -286,10 +286,12 @@ export default function HomePage() {
           title="Visit Our Philadelphia Market"
           description="Stop by for fresh Halal meats and authentic groceries, or send a message for custom butcher cut inquiries."
           submitText="Send Inquiry"
-          successText="Thank you, we will contact you shortly."
+          successText="Thank you! Your inquiry has been sent directly to the store owner."
+          ownerEmail="info@almadinafoodmarket.com"
           details={[
             "8001 Castor Ave, Philadelphia PA",
             "(215) 613-6596",
+            "info@almadinafoodmarket.com",
             "Mon–Sat 9AM–8PM, Sun 9AM–6PM"
           ]}
           imageAlt="Fresh premium raw Halal meat displayed at Al-Madina market counter"

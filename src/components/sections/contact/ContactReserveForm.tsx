@@ -17,6 +17,7 @@ type ContactReserveFormProps = {
   description?: string;
   submitText?: string;
   successText?: string;
+  ownerEmail?: string;
   details?: string[];
   imageSrc?: string;
   imageAlt?: string;
@@ -34,6 +35,7 @@ const ContactReserveForm = ({
   description = "Tell us when you are coming and how many are hungry. We hold tables for fifteen minutes.",
   submitText = "Send request",
   successText = "Thanks, we will confirm by email",
+  ownerEmail = "info@almadinafoodmarket.com",
   details = ["1824 West Division St, Chicago", "Every day, 8 AM to 4 PM"],
   imageSrc = "https://images.pexels.com/photos/1080696/pexels-photo-1080696.jpeg?auto=compress&cs=tinysrgb&w=1600",
   imageAlt = "Dining room with tall windows",
@@ -49,6 +51,20 @@ const ContactReserveForm = ({
 
   const onSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    const name = (formData.get("name") as string) || "";
+    const email = (formData.get("email") as string) || "";
+    const date = (formData.get("date") as string) || "";
+    const guests = (formData.get("guests") as string) || "";
+    const note = (formData.get("note") as string) || "";
+
+    const subject = encodeURIComponent(`Al-Madina Customer Inquiry from ${name}`);
+    const body = encodeURIComponent(
+      `Customer Name: ${name}\nCustomer Email: ${email}\nTarget Visit Date: ${date}\nQuantity/Required: ${guests}\nNotes/Custom Cut Details: ${note}`
+    );
+
+    window.location.href = `mailto:${ownerEmail}?subject=${subject}&body=${body}`;
     setSent(true);
   };
 
@@ -77,6 +93,9 @@ const ContactReserveForm = ({
             </motion.p>
           )}
           <motion.form
+            action={`mailto:${ownerEmail}`}
+            method="POST"
+            encType="text/plain"
             onSubmit={onSubmit}
             initial={reduce ? false : { opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -100,11 +119,28 @@ const ContactReserveForm = ({
               <p className="font-mono text-[length:var(--text-label)] uppercase tracking-[var(--label-tracking)]">{labels?.note ?? "Note"}</p>
               <textarea name="note" rows={2} className="w-full resize-none border-b border-input bg-transparent py-2.5 text-[length:var(--text-body)] text-foreground outline-none focus:border-foreground" />
             </label>
-            <div className="col-span-2 flex flex-wrap items-center gap-4">
-              <button type="submit" className="btn-primary">
+            <div className="col-span-2 flex flex-col gap-3">
+              <button type="submit" className="btn-primary self-start">
                 <p className="btn-label font-mono uppercase tracking-[var(--label-tracking)]">{submitText}</p>
               </button>
-              {sent && <p role="status" className="text-[length:var(--text-small)]">{successText}</p>}
+              {sent && (
+                <motion.div
+                  initial={reduce ? false : { opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="mt-2 flex items-start gap-3 rounded-lg border border-primary/40 bg-primary/10 p-4 text-foreground"
+                  role="status"
+                >
+                  <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-primary text-xs font-bold text-background">
+                    ✓
+                  </span>
+                  <div>
+                    <p className="font-semibold text-[length:var(--text-body)]">{successText}</p>
+                    <p className="mt-1 text-[length:var(--text-small)] text-muted-foreground">
+                      Your inquiry is sent directly to <span className="font-mono font-medium text-foreground">{ownerEmail}</span>.
+                    </p>
+                  </div>
+                </motion.div>
+              )}
             </div>
           </motion.form>
           {details.length > 0 && (
@@ -120,6 +156,13 @@ const ContactReserveForm = ({
                 if (line.includes("215") || line.includes("613")) {
                   return (
                     <a key={index} href="tel:(215) 613-6596" className="font-mono text-[length:var(--text-label)] uppercase tracking-[var(--label-tracking)] text-foreground hover:text-primary transition-colors">
+                      {line}
+                    </a>
+                  );
+                }
+                if (line.includes("@")) {
+                  return (
+                    <a key={index} href={`mailto:${line}`} className="font-mono text-[length:var(--text-label)] uppercase tracking-[var(--label-tracking)] text-foreground hover:text-primary transition-colors">
                       {line}
                     </a>
                   );
