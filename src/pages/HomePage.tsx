@@ -1,7 +1,6 @@
 import HeroWordmarkWindow from "@/components/sections/hero/HeroWordmarkWindow";
 import ProductBestsellerTrack from "@/components/sections/product/ProductBestsellerTrack";
 import GalleryCornerMasks from "@/components/sections/gallery/GalleryCornerMasks";
-import TeamTiltPortraits from "@/components/sections/team/TeamTiltPortraits";
 import PricingWorkshopTickets from "@/components/sections/pricing/PricingWorkshopTickets";
 import TestimonialVideoCoverflow from "@/components/sections/testimonial/TestimonialVideoCoverflow";
 import FaqSlashList from "@/components/sections/faq/FaqSlashList";
@@ -137,64 +136,6 @@ export default function HomePage() {
               caption: "Authentic pantry staples"
             }
           ]}
-        />
-      </div>
-
-      <div id="team-tilt-portraits" data-webild-section="TeamTiltPortraits" data-webild-section-id="TeamTiltPortraits-1" data-section="team-tilt-portraits">
-        <TeamTiltPortraits
-          label="Our Market Team"
-          title="Meet the experts behind our Halal counter"
-          items={[
-            {
-              name: "Lauren Coleman",
-              role: "Head Grocery Specialist",
-              imageSrc: "https://img.b2bpic.net/free-photo/female-staff-standing-meat-counter_107420-63669.jpg",
-              imageAlt: "Female staff standing at meat counter"
-            },
-            {
-              name: "Connor Hughes",
-              role: "Head Halal Butcher",
-              imageSrc: "https://img.b2bpic.net/free-photo/unrecognizable-tattoed-butcher-black-gloves-offers-piece-luxury-whale-meat-white-craft-paper_346278-669.jpg",
-              imageAlt: "man holding raw beef steak"
-            },
-            {
-              name: "Abigail Reid",
-              role: "Customer Service Lead",
-              imageSrc: "https://img.b2bpic.net/free-photo/beautiful-woman-carrying-shopping-bags_23-2148660763.jpg",
-              imageAlt: "smiling woman with shopping bags"
-            },
-            {
-              name: "Caleb Henderson",
-              role: "Senior Meat Craftsman",
-              imageSrc: "https://img.b2bpic.net/free-photo/butcher-pepper-tied-piece-steak-meat-smoke-closeup_346278-622.jpg",
-              imageAlt: "man seasoning raw beef"
-            },
-            {
-              name: "Megan Foster",
-              role: "Fresh Produce Lead",
-              imageSrc: "https://img.b2bpic.net/free-photo/front-view-cute-girl-looking-away_23-2148436134.jpg",
-              imageAlt: "smiling woman in plaid shirt"
-            },
-            {
-              name: "Callum Turner",
-              role: "Store General Manager",
-              imageSrc: "https://img.b2bpic.net/free-photo/smiling-african-american-man-posing-library_74855-1619.jpg",
-              imageAlt: "smiling man in white shirt"
-            },
-            {
-              name: "Layla Mansour",
-              role: "Middle Eastern Foods Buyer",
-              imageSrc: "https://img.b2bpic.net/free-photo/dreamy-woman-with-shopping-bags_23-2147652116.jpg",
-              imageAlt: "woman shopping with colorful bags"
-            },
-            {
-              name: "Zahra Al-Sayed",
-              role: "Quality Control Lead",
-              imageSrc: "https://img.b2bpic.net/free-photo/smiling-woman-standing-supermarket_107420-96366.jpg",
-              imageAlt: "woman shopping in a supermarket"
-            }
-          ]}
-          stickerText="Cut fresh daily"
         />
       </div>
 
