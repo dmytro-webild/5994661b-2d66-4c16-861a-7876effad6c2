@@ -48,7 +48,7 @@ export default function Layout() {
           emailLabel="Email Address*"
           emailPlaceholder="info@almadinafoodmarket.com"
           submitText="Subscribe"
-          imageSrc="https://img.b2bpic.net/free-photo/close-up-view-fresh-raw-red-meats-brown-wooden-cutting-board-knife-garlics-dark-color-background_179666-46985.jpg"
+          imageSrc="https://img.b2bpic.net/free-photo/close-up-view-fresh-raw-red-meats-brown-wooden-cutting-board-knife-garlics-dark-color-background_179666-46985.jpg?_wi=2"
           imageAlt="Fresh premium cut halal beef on a wooden cutting board"
           caption="/Philadelphia's premier halal meat counter and market"
           columns={[

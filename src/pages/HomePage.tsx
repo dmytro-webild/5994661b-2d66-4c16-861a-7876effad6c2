@@ -61,7 +61,7 @@ export default function HomePage() {
             {
               name: "Fresh Goat Meat",
               price: "Call",
-              imageSrc: "https://img.b2bpic.net/free-photo/close-up-view-fresh-raw-red-meats-brown-wooden-cutting-board-knife-garlics-dark-color-background_179666-46985.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/close-up-view-fresh-raw-red-meats-brown-wooden-cutting-board-knife-garlics-dark-color-background_179666-46985.jpg?_wi=1",
               imageAlt: "raw beef on wooden cutting board"
             },
             {
