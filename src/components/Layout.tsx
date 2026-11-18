@@ -18,12 +18,20 @@ export default function Layout() {
               href: "#gallery-corner-masks"
             },
             {
+              name: "Meat Packages",
+              href: "#pricing-workshop-tickets"
+            },
+            {
               name: "Reviews",
               href: "#testimonial"
             },
             {
               name: "Store Info",
               href: "#faq-slash-list"
+            },
+            {
+              name: "Contact",
+              href: "#contact-reserve-form"
             }
           ]}
           primaryButton={{
@@ -52,7 +60,8 @@ export default function Layout() {
               title: "Visit Us",
               items: [
                 {
-                  label: "8001 Castor Ave, Philadelphia, PA 19152"
+                  label: "8001 Castor Ave, Philadelphia, PA 19152",
+                  href: "https://maps.app.goo.gl/uR2gX13ZgXW6"
                 },
                 {
                   label: "Get Directions",
@@ -64,10 +73,12 @@ export default function Layout() {
               title: "Store Hours",
               items: [
                 {
-                  label: "Mon–Sat: 9 AM–8 PM"
+                  label: "Mon–Sat: 9 AM–8 PM",
+                  href: "#contact-reserve-form"
                 },
                 {
-                  label: "Sun: 9 AM–6 PM"
+                  label: "Sun: 9 AM–6 PM",
+                  href: "#contact-reserve-form"
                 }
               ]
             },
@@ -76,7 +87,7 @@ export default function Layout() {
               items: [
                 {
                   label: "(215) 613-6596",
-                  href: "tel:2156136596"
+                  href: "tel:(215) 613-6596"
                 },
                 {
                   label: "info@almadinafoodmarket.com",
@@ -88,10 +99,12 @@ export default function Layout() {
               title: "Reviews",
               items: [
                 {
-                  label: "4.8 ★ Rating on Google"
+                  label: "4.8 ★ Rating on Google",
+                  href: "#testimonial"
                 },
                 {
-                  label: "264 Verified Customer Reviews"
+                  label: "264 Verified Customer Reviews",
+                  href: "#testimonial"
                 },
                 {
                   label: "Read Testimonials",
@@ -109,6 +122,10 @@ export default function Layout() {
                 {
                   label: "Market Showcase",
                   href: "#gallery-corner-masks"
+                },
+                {
+                  label: "Meat Packages",
+                  href: "#pricing-workshop-tickets"
                 },
                 {
                   label: "Visitor FAQs",

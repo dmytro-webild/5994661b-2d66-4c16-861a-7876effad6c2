@@ -9,6 +9,8 @@ type HeroWordmarkWindowProps = {
   title?: string;
   description?: string;
   primaryButton?: Cta;
+  secondaryButton?: Cta;
+  buttons?: Cta[];
   imageSrc?: string;
   imageAlt?: string;
   leftLabel?: string;
@@ -32,6 +34,8 @@ const HeroWordmarkWindow = ({
   title = "Crumb & Butter",
   description = "All-day brunch and smash burgers on a Chicago corner, made from scratch every morning.",
   primaryButton,
+  secondaryButton,
+  buttons,
   imageSrc = "https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=1600",
   imageAlt = "",
   leftLabel = "/Serving since 2012",
@@ -136,11 +140,28 @@ const HeroWordmarkWindow = ({
                 {description}
               </motion.p>
             )}
-            {primaryButton && (
-              <motion.div {...rise(textAt + 0.1)} className="mt-[clamp(1rem,2.5svh,1.5rem)]">
-                <a href={primaryButton.href ?? "#"} className="btn-primary">
-                  <p className="btn-label">{primaryButton.text}</p>
-                </a>
+            {(primaryButton || secondaryButton || (buttons && buttons.length > 0)) && (
+              <motion.div {...rise(textAt + 0.1)} className="mt-[clamp(1rem,2.5svh,1.5rem)] flex flex-wrap items-center justify-center gap-3">
+                {buttons && buttons.length > 0 ? (
+                  buttons.map((btn, idx) => (
+                    <a key={idx} href={btn.href ?? "#"} className={idx === 0 ? "btn-primary" : "btn-secondary border border-border"}>
+                      <p className="btn-label">{btn.text}</p>
+                    </a>
+                  ))
+                ) : (
+                  <>
+                    {primaryButton && (
+                      <a href={primaryButton.href ?? "#"} className="btn-primary">
+                        <p className="btn-label">{primaryButton.text}</p>
+                      </a>
+                    )}
+                    {secondaryButton && (
+                      <a href={secondaryButton.href ?? "#"} className="btn-secondary border border-border">
+                        <p className="btn-label">{secondaryButton.text}</p>
+                      </a>
+                    )}
+                  </>
+                )}
               </motion.div>
             )}
           </motion.div>
