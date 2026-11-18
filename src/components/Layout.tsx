@@ -18,10 +18,6 @@ export default function Layout() {
               href: "#gallery-corner-masks"
             },
             {
-              name: "Our Cutters",
-              href: "#team-tilt-portraits"
-            },
-            {
               name: "Reviews",
               href: "#testimonial"
             },
