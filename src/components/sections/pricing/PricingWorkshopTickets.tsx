@@ -66,7 +66,9 @@ const PricingWorkshopTickets = ({
         <ul className="flex flex-wrap justify-center gap-[var(--gap)]">
           {items.map((item, index) => {
             const tone = item.featured ? "deep" : undefined;
-            const ground = item.featured ? "bg-background [--accent:var(--brand)] [--accent-foreground:var(--deep-foreground)]" : "bg-[var(--sand)] [--foreground:var(--brand)] [--primary:var(--brand)] [--accent:var(--background)] [--accent-foreground:var(--brand)]";
+            const ground = item.featured
+              ? "bg-card text-foreground border border-primary/40 shadow-xl"
+              : "bg-[var(--sand)] text-foreground border border-border/60";
             return (
               <motion.li
                 key={index}
@@ -81,22 +83,22 @@ const PricingWorkshopTickets = ({
                     <div
                       data-tone={tone}
                       className={cn(
-                        "relative flex flex-col gap-3 px-[clamp(1.25rem,2.4vw,2rem)] pb-6 pt-[clamp(1.5rem,2.6vw,2.25rem)] text-foreground [mask:radial-gradient(circle_at_0_100%,transparent_0.85rem,black_0.9rem)_left/51%_100%_no-repeat,radial-gradient(circle_at_100%_100%,transparent_0.85rem,black_0.9rem)_right/51%_100%_no-repeat]",
+                        "relative flex flex-col gap-3 px-[clamp(1.25rem,2.4vw,2rem)] pb-6 pt-[clamp(1.5rem,2.6vw,2.25rem)] [mask:radial-gradient(circle_at_0_100%,transparent_0.85rem,black_0.9rem)_left/51%_100%_no-repeat,radial-gradient(circle_at_100%_100%,transparent_0.85rem,black_0.9rem)_right/51%_100%_no-repeat]",
                         ground,
                       )}
                     >
                       <div className="flex items-start justify-between gap-3">
-                        {item.label && <p className="font-mono text-[length:var(--text-label)] uppercase tracking-[var(--label-tracking)]">{item.label}</p>}
-                        {item.featured && featuredTag && <p className="font-mono text-[length:var(--text-label)] uppercase tracking-[var(--label-tracking)]">{featuredTag}</p>}
+                        {item.label && <p className="font-mono text-[length:var(--text-label)] uppercase tracking-[var(--label-tracking)] text-primary">{item.label}</p>}
+                        {item.featured && featuredTag && <p className="font-mono text-[length:var(--text-label)] uppercase tracking-[var(--label-tracking)] text-primary font-semibold">{featuredTag}</p>}
                       </div>
                       <h3 className="text-[length:var(--text-h2)] [overflow-wrap:anywhere]">{item.name}</h3>
-                      {item.price && <p className="mt-2 text-[length:calc(var(--text-h1)*1.25)] leading-none tracking-[var(--heading-tracking)] [font-family:var(--font-heading)]">{item.price}</p>}
+                      {item.price && <p className="mt-2 text-[length:calc(var(--text-h1)*1.25)] leading-none tracking-[var(--heading-tracking)] [font-family:var(--font-heading)] text-primary">{item.price}</p>}
                       {item.period && <p className="font-mono text-[length:var(--text-label)] uppercase tracking-[var(--label-tracking)] opacity-80">{item.period}</p>}
                     </div>
                     <div
                       data-tone={tone}
                       className={cn(
-                        "relative flex flex-1 flex-col gap-6 border-t-2 border-dashed border-foreground/30 px-[clamp(1.25rem,2.4vw,2rem)] pb-[clamp(1.5rem,2.6vw,2.25rem)] pt-6 text-foreground [mask:radial-gradient(circle_at_0_0,transparent_0.85rem,black_0.9rem)_left/51%_100%_no-repeat,radial-gradient(circle_at_100%_0,transparent_0.85rem,black_0.9rem)_right/51%_100%_no-repeat]",
+                        "relative flex flex-1 flex-col gap-6 border-t-2 border-dashed border-foreground/30 px-[clamp(1.25rem,2.4vw,2rem)] pb-[clamp(1.5rem,2.6vw,2.25rem)] pt-6 [mask:radial-gradient(circle_at_0_0,transparent_0.85rem,black_0.9rem)_left/51%_100%_no-repeat,radial-gradient(circle_at_100%_0,transparent_0.85rem,black_0.9rem)_right/51%_100%_no-repeat]",
                         ground,
                       )}
                     >
@@ -111,7 +113,13 @@ const PricingWorkshopTickets = ({
                         </ul>
                       )}
                       {item.cta && (
-                        <a href={item.cta.href ?? "#"} className="btn-primary mt-auto self-start">
+                        <a
+                          href={item.cta.href || "tel:(215) 613-6596"}
+                          className={cn(
+                            item.featured ? "btn-primary" : "btn-secondary",
+                            "mt-auto self-start border border-primary/20 shadow-md"
+                          )}
+                        >
                           <p className="btn-label font-mono uppercase tracking-[var(--label-tracking)]">{item.cta.text}</p>
                         </a>
                       )}

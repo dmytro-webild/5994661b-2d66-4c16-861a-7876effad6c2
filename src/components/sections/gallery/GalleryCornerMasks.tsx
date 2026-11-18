@@ -14,6 +14,7 @@ type GalleryCornerMasksProps = {
   label?: string;
   title?: string;
   items?: Photo[];
+  button?: { text: string; href: string };
   ariaLabel?: string;
   className?: string;
 };
@@ -64,6 +65,7 @@ const GalleryCornerMasks = ({
   label = "Life at the corner",
   title = "Come for the buns, stay for the people",
   items = defaultItems,
+  button,
   ariaLabel,
   className,
 }: GalleryCornerMasksProps) => {
@@ -119,6 +121,13 @@ const GalleryCornerMasks = ({
             </motion.ul>
           ))}
         </div>
+        {button?.text && (
+          <div className="mx-auto mt-[clamp(2rem,4vw,3.5rem)] flex justify-center">
+            <a href={button.href} className="btn-secondary border border-border">
+              <p className="btn-label font-mono uppercase tracking-[var(--label-tracking)]">{button.text}</p>
+            </a>
+          </div>
+        )}
       </div>
     </section>
   );

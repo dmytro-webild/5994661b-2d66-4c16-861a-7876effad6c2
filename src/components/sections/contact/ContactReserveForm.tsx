@@ -108,10 +108,26 @@ const ContactReserveForm = ({
             </div>
           </motion.form>
           {details.length > 0 && (
-            <div className="mt-[clamp(2rem,4vw,3.5rem)] flex flex-col gap-1 border-t border-border pt-5">
-              {details.map((line, index) => (
-                <p key={index} className="font-mono text-[length:var(--text-label)] uppercase tracking-[var(--label-tracking)]">{line}</p>
-              ))}
+            <div className="mt-[clamp(2rem,4vw,3.5rem)] flex flex-col gap-2 border-t border-border pt-5">
+              {details.map((line, index) => {
+                if (line.includes("Castor")) {
+                  return (
+                    <a key={index} href="https://maps.app.goo.gl/uR2gX13ZgXW6" target="_blank" rel="noopener noreferrer" className="font-mono text-[length:var(--text-label)] uppercase tracking-[var(--label-tracking)] text-foreground hover:text-primary transition-colors">
+                      {line} ↗
+                    </a>
+                  );
+                }
+                if (line.includes("215") || line.includes("613")) {
+                  return (
+                    <a key={index} href="tel:(215) 613-6596" className="font-mono text-[length:var(--text-label)] uppercase tracking-[var(--label-tracking)] text-foreground hover:text-primary transition-colors">
+                      {line}
+                    </a>
+                  );
+                }
+                return (
+                  <p key={index} className="font-mono text-[length:var(--text-label)] uppercase tracking-[var(--label-tracking)] text-muted-foreground">{line}</p>
+                );
+              })}
             </div>
           )}
         </div>

@@ -35,6 +35,20 @@ export default function HomePage() {
             "Fresh Produce Daily",
             "Castor Ave Philly"
           ]}
+          buttons={[
+            {
+              text: "Explore Products",
+              href: "#product"
+            },
+            {
+              text: "Call (215) 613-6596",
+              href: "tel:(215) 613-6596"
+            },
+            {
+              text: "Get Directions",
+              href: "https://maps.app.goo.gl/uR2gX13ZgXW6"
+            }
+          ]}
           introDelay={3}
           handoff
         />
@@ -94,6 +108,10 @@ export default function HomePage() {
           label="Inside Our Market"
           title="Fresh Halal Meats and Middle Eastern Groceries"
           ariaLabel="Photo gallery of Al-Madina Food & Meat Market"
+          button={{
+            text: "Inquire Custom Cuts",
+            href: "#contact-reserve-form"
+          }}
           items={[
             {
               imageSrc: "https://img.b2bpic.net/free-photo/fresh-beef-steak-with-rosemary-sprigs-peppercorns-isolated-white-background_60438-3495.jpg",
@@ -157,8 +175,8 @@ export default function HomePage() {
                 "Custom portion packaging"
               ],
               cta: {
-                text: "Call store",
-                href: "tel:2156136596"
+                text: "Call Store",
+                href: "tel:(215) 613-6596"
               }
             },
             {
@@ -172,8 +190,8 @@ export default function HomePage() {
                 "Trimmed to preference"
               ],
               cta: {
-                text: "Call store",
-                href: "tel:2156136596"
+                text: "Call Store",
+                href: "tel:(215) 613-6596"
               },
               featured: true
             },
@@ -188,8 +206,8 @@ export default function HomePage() {
                 "Advance reservation"
               ],
               cta: {
-                text: "Call store",
-                href: "tel:2156136596"
+                text: "Call Store",
+                href: "tel:(215) 613-6596"
               }
             }
           ]}

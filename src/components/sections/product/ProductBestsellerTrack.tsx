@@ -75,9 +75,13 @@ const DishCard = ({ item, index, trackX }: { item: Dish; index: number; trackX: 
       <div className="relative aspect-square w-full overflow-hidden rounded-[var(--radius-image)] bg-muted">
         <Media src={item.imageSrc} alt={item.imageAlt ?? item.name} loading="lazy" decoding="async" draggable={false} className="absolute inset-0 size-full object-cover" />
       </div>
-      <div className="mt-4 flex items-baseline justify-between gap-4">
-        <p className="min-w-0 font-mono text-[length:var(--text-label)] uppercase tracking-[var(--label-tracking)] text-foreground [overflow-wrap:anywhere] before:content-['/']">{item.name}</p>
-        {item.price && <p className="shrink-0 font-mono text-[length:var(--text-label)] text-muted-foreground">{item.price}</p>}
+      <div className="mt-4 flex items-center justify-between gap-3">
+        <div className="min-w-0">
+          <p className="font-mono text-[length:var(--text-label)] uppercase tracking-[var(--label-tracking)] text-foreground [overflow-wrap:anywhere] before:content-['/']">{item.name}</p>
+        </div>
+        <a href="tel:(215) 613-6596" aria-label={`Call to order ${item.name}`} className="btn-secondary shrink-0 border border-border !py-1 !px-3 text-xs">
+          <span className="btn-label font-mono uppercase tracking-wider">Call</span>
+        </a>
       </div>
     </motion.div>
   );
@@ -127,8 +131,8 @@ const ProductBestsellerTrack = ({
       </HorizontalScrollSection>
       {button?.text && (
         <div className="mx-auto mt-[clamp(1.5rem,3vw,3rem)] flex w-[var(--container)] justify-center">
-          <a href={button.href ?? "#"} className="btn-secondary border border-foreground bg-transparent">
-            {button.text}
+          <a href={button.href ?? "tel:(215) 613-6596"} className="btn-primary">
+            <p className="btn-label font-mono uppercase tracking-[var(--label-tracking)]">{button.text}</p>
           </a>
         </div>
       )}
