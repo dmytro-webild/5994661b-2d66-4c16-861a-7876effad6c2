@@ -61,11 +61,11 @@ export default function Layout() {
               items: [
                 {
                   label: "8001 Castor Ave, Philadelphia, PA 19152",
-                  href: "https://maps.app.goo.gl/uR2gX13ZgXW6"
+                  href: "https://www.google.com/maps/search/?api=1&query=Al-Madina+Food+%26+Meat+Market+8001+Castor+Ave+Philadelphia+PA+19152"
                 },
                 {
                   label: "Get Directions",
-                  href: "https://maps.app.goo.gl/uR2gX13ZgXW6"
+                  href: "https://www.google.com/maps/search/?api=1&query=Al-Madina+Food+%26+Meat+Market+8001+Castor+Ave+Philadelphia+PA+19152"
                 }
               ]
             },
@@ -99,11 +99,11 @@ export default function Layout() {
               title: "Reviews",
               items: [
                 {
-                  label: "4.8 ★ Rating on Google",
+                  label: "5.0 ★ Rating on Google",
                   href: "#testimonial"
                 },
                 {
-                  label: "264 Verified Customer Reviews",
+                  label: "5 Verified Customer Reviews",
                   href: "#testimonial"
                 },
                 {
