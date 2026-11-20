@@ -12,14 +12,14 @@ export default function HomePage() {
     <>
       <LoaderPanelFlick
         images={[
+          "https://storage.googleapis.com/webild/users/user_3MEwysOv31t7f9Ov9oDsUF6BXKv/uploaded-1795207628168-hoc0mb0e.jpg",
+          "https://storage.googleapis.com/webild/users/user_3MEwysOv31t7f9Ov9oDsUF6BXKv/uploaded-1795207628169-q6s8o3yr.jpg",
+          "https://storage.googleapis.com/webild/users/user_3MEwysOv31t7f9Ov9oDsUF6BXKv/uploaded-1795207628169-2uwp6tmv.jpg",
           "https://img.b2bpic.net/free-photo/raw-meat-grill-arrangement_23-2148917727.jpg",
-          "https://img.b2bpic.net/free-photo/raw-t-bone-steak-with-herbs-salt-dark-background_84443-72359.jpg",
-          "https://img.b2bpic.net/free-photo/close-up-view-fresh-raw-red-meats-brown-wooden-cutting-board-knife-garlics-dark-color-background_179666-46985.jpg",
-          "https://img.b2bpic.net/free-photo/top-view-meat-with-salt-spices-slate_23-2148610982.jpg",
-          "https://img.b2bpic.net/free-photo/cardboard-box-with-vegetables-fruits_23-2148667903.jpg"
+          "https://img.b2bpic.net/free-photo/raw-t-bone-steak-with-herbs-salt-dark-background_84443-72359.jpg"
         ]}
         label="/100% Halal Certified"
-        caption="/Fresh Cuts Daily in Philadelphia"
+        caption="/Fresh Meat & Groceries Daily in Philadelphia"
       />
 
       <div id="hero" data-webild-section="HeroWordmarkWindow" data-webild-section-id="HeroWordmarkWindow-1" data-section="hero" data-scene>
@@ -56,8 +56,8 @@ export default function HomePage() {
 
       <div id="product" data-webild-section="ProductBestsellerTrack" data-webild-section-id="ProductBestsellerTrack-1" data-section="product" data-scene>
         <ProductBestsellerTrack
-          label="/Halal Butchery"
-          title="Finest Halal meats cut fresh daily"
+          label="/Halal Butchery & Fresh Market"
+          title="Finest Halal meats & authentic Middle Eastern groceries"
           items={[
             {
               name: "Fresh Halal Beef",
@@ -66,34 +66,34 @@ export default function HomePage() {
               imageAlt: "Above view of raw fresh red meat with green and pepper on black board knife garlics lemon spices wooden hammer lemon wine bottle on oil pastel red background"
             },
             {
+              name: "Fresh Ameer Bakery Bread",
+              price: "Call",
+              imageSrc: "https://storage.googleapis.com/webild/users/user_3MEwysOv31t7f9Ov9oDsUF6BXKv/uploaded-1795207628168-hoc0mb0e.jpg",
+              imageAlt: "Freshly baked pita and taboon flatbreads from Ameer Bakery"
+            },
+            {
+              name: "Fresh Green Plums (Janarek)",
+              price: "Call",
+              imageSrc: "https://storage.googleapis.com/webild/users/user_3MEwysOv31t7f9Ov9oDsUF6BXKv/uploaded-1795207628169-q6s8o3yr.jpg",
+              imageAlt: "Fresh seasonal sour green plums produce"
+            },
+            {
+              name: "Imported Oils & Groceries",
+              price: "Call",
+              imageSrc: "https://storage.googleapis.com/webild/users/user_3MEwysOv31t7f9Ov9oDsUF6BXKv/uploaded-1795207628169-2uwp6tmv.jpg",
+              imageAlt: "Stocked store shelves with olive oils, ghee, and Middle Eastern staples"
+            },
+            {
               name: "Premium Lamb",
               price: "Call",
               imageSrc: "https://img.b2bpic.net/free-photo/raw-meat-seasoned-baking-pan_23-2148599748.jpg",
-              imageAlt: "Raw meat seasoned  in baking pan"
+              imageAlt: "Raw meat seasoned in baking pan"
             },
             {
               name: "Fresh Goat Meat",
               price: "Call",
               imageSrc: "https://img.b2bpic.net/free-photo/close-up-view-fresh-raw-red-meats-brown-wooden-cutting-board-knife-garlics-dark-color-background_179666-46985.jpg?_wi=1",
               imageAlt: "raw beef on wooden cutting board"
-            },
-            {
-              name: "Halal Chicken",
-              price: "Call",
-              imageSrc: "https://img.b2bpic.net/free-photo/raw-beef-meat_74190-4079.jpg",
-              imageAlt: "close up of raw beef"
-            },
-            {
-              name: "Fresh Sausages",
-              price: "Call",
-              imageSrc: "https://img.b2bpic.net/free-photo/raw-meat-color-background_1220-7392.jpg",
-              imageAlt: "raw beef steak on beige"
-            },
-            {
-              name: "Custom Meat Cuts",
-              price: "Call",
-              imageSrc: "https://img.b2bpic.net/free-photo/male-hand-gloves-cutting-juicy-grapefruit-marble-table_2831-7925.jpg",
-              imageAlt: "Male hand in gloves cutting juicy grapefruit on marble table."
             }
           ]}
           button={{
@@ -114,6 +114,21 @@ export default function HomePage() {
           }}
           items={[
             {
+              imageSrc: "https://storage.googleapis.com/webild/users/user_3MEwysOv31t7f9Ov9oDsUF6BXKv/uploaded-1795207628168-hoc0mb0e.jpg",
+              imageAlt: "Freshly baked pita and taboon flatbreads from Ameer Bakery at Al-Madina market",
+              caption: "Fresh pita & Middle Eastern bread"
+            },
+            {
+              imageSrc: "https://storage.googleapis.com/webild/users/user_3MEwysOv31t7f9Ov9oDsUF6BXKv/uploaded-1795207628169-q6s8o3yr.jpg",
+              imageAlt: "Fresh sour green plums (Janarek) produce at Al-Madina market",
+              caption: "Fresh seasonal green plums"
+            },
+            {
+              imageSrc: "https://storage.googleapis.com/webild/users/user_3MEwysOv31t7f9Ov9oDsUF6BXKv/uploaded-1795207628169-2uwp6tmv.jpg",
+              imageAlt: "Fully stocked grocery shelves with imported oils, ghees, and Mediterranean pantry items",
+              caption: "Imported groceries & pantry staples"
+            },
+            {
               imageSrc: "https://img.b2bpic.net/free-photo/fresh-beef-steak-with-rosemary-sprigs-peppercorns-isolated-white-background_60438-3495.jpg",
               imageAlt: "Fresh beef steak with rosemary sprigs and peppercorns isolated on white background",
               caption: "Hand-cut Halal beef"
@@ -122,11 +137,6 @@ export default function HomePage() {
               imageSrc: "https://img.b2bpic.net/free-photo/top-view-fresh-meat-slice-with-tomatoes-pepper-dark-blue-background-kitchen-animal-cow-chicken-food-color-meat_179666-45998.jpg",
               imageAlt: "Top view fresh meat slice with tomatoes and pepper on dark blue background kitchen animal cow chicken food color meat",
               caption: "Custom cut steaks"
-            },
-            {
-              imageSrc: "https://img.b2bpic.net/free-photo/front-view-peppers-tomatoes-wicker-basket-bowl-dark-background_140725-139453.jpg",
-              imageAlt: "Front view peppers and tomatoes in wicker basket bowl on dark background",
-              caption: "Fresh produce selection"
             },
             {
               imageSrc: "https://img.b2bpic.net/free-photo/top-view-meat-with-salt-spices-slate_23-2148610982.jpg",
@@ -139,19 +149,9 @@ export default function HomePage() {
               caption: "Expert butcher service"
             },
             {
-              imageSrc: "https://img.b2bpic.net/free-photo/photorealistic-view-woman-harvesting-organic-sustainable-garden_23-2151462910.jpg",
-              imageAlt: "Photorealistic view of woman harvesting in an organic sustainable garden",
-              caption: "Daily fresh arrivals"
-            },
-            {
               imageSrc: "https://img.b2bpic.net/free-photo/grilled-steak-with-fresh-herb-garnish-dark-slate-plate-closeup_84443-91405.jpg",
               imageAlt: "Grilled steak with fresh herb garnish on dark slate plate closeup",
               caption: "Quality cuts daily"
-            },
-            {
-              imageSrc: "https://img.b2bpic.net/free-photo/medium-shot-woman-reading_23-2149081060.jpg",
-              imageAlt: "Medium shot woman reading",
-              caption: "Authentic pantry staples"
             }
           ]}
         />
