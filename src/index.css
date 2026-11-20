@@ -10,15 +10,15 @@
 
 /* webild:theme-ai */
 :root {
-  --primary-cta: #b5832a;
-  --primary-cta-text: #ffffff;
-  --secondary-cta: #241c0e;
-  --secondary-cta-text: #f6ecd2;
-  --background-accent: #241c0e;
+  --primary-cta: #ad0000;
+  --primary-cta-text: #f8f5e9;
+  --secondary-cta: #efe5d2;
+  --secondary-cta-text: #ad0000;
+  --background-accent: #efe5d2;
 
-  --background: #17130a;
-  --foreground: #f6ecd2;
-  --card: #221c10;
+  --background: #f8f5e9;
+  --foreground: #ad0000;
+  --card: #f6efc9;
   --card-foreground: var(--foreground);
   --popover: var(--card);
   --popover-foreground: var(--foreground);
@@ -26,22 +26,22 @@
   --primary-foreground: var(--primary-cta-text);
   --secondary: var(--secondary-cta);
   --secondary-foreground: var(--secondary-cta-text);
-  --muted: #221c10;
-  --muted-foreground: #cdb88e;
+  --muted: #e9e6de;
+  --muted-foreground: #a8443c;
   --accent: var(--background-accent);
-  --accent-foreground: #d9a53a;
-  --deep: #0b0905;
-  --brand: #b5832a;
-  --sand: #241c0e;
-  --deep-foreground: #ffffff;
+  --accent-foreground: #ad0000;
+  --deep: #3a1a14;
+  --brand: #ad0000;
+  --sand: #efe5d2;
+  --deep-foreground: #f8f5e9;
   --destructive: #ad0000;
   --destructive-foreground: #f8f5e9;
-  --border: #3a2e18;
-  --input: #b5832a;
+  --border: #e9e3d6;
+  --input: #ad0000;
   --ring: var(--primary-cta);
-  --tint-1: #30260f;
-  --tint-2: #2e2514;
-  --tint-3: #29231a;
+  --tint-1: #f6efc9;
+  --tint-2: #f3e3d3;
+  --tint-3: #e9e6de;
 
   --font-heading: "Cormorant Garamond", Georgia, "Times New Roman", serif;
   --font-body: "Manrope", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -296,16 +296,16 @@
 [data-tone="deep"] {
   --background: var(--deep);
   --foreground: var(--deep-foreground);
-  --card: #221c10;
+  --card: #f6efc9;
   --card-foreground: var(--deep-foreground);
   --primary: var(--deep-foreground);
   --primary-foreground: var(--deep);
   --secondary: #800020;
   --secondary-foreground: var(--deep-foreground);
-  --muted: #221c10;
-  --muted-foreground: #cdb88e;
-  --border: #3a2e18;
-  --input: #b5832a;
+  --muted: #e9e6de;
+  --muted-foreground: #a8443c;
+  --border: #e9e3d6;
+  --input: #ad0000;
   --ring: var(--deep-foreground);
   background-color: var(--background);
   color: var(--foreground);
