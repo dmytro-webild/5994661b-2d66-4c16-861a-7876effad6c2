@@ -144,19 +144,35 @@ const HeroWordmarkWindow = ({
               <motion.div {...rise(textAt + 0.1)} className="mt-[clamp(1rem,2.5svh,1.5rem)] flex flex-wrap items-center justify-center gap-3">
                 {buttons && buttons.length > 0 ? (
                   buttons.map((btn, idx) => (
-                    <a key={idx} href={btn.href ?? "#"} className={idx === 0 ? "btn-primary" : "btn-secondary border border-border"}>
+                    <a
+                      key={idx}
+                      href={btn.href ?? "#"}
+                      target={btn.href?.startsWith("http") ? "_blank" : undefined}
+                      rel={btn.href?.startsWith("http") ? "noopener noreferrer" : undefined}
+                      className={idx === 0 ? "btn-primary" : "btn-secondary border border-border"}
+                    >
                       <p className="btn-label">{btn.text}</p>
                     </a>
                   ))
                 ) : (
                   <>
                     {primaryButton && (
-                      <a href={primaryButton.href ?? "#"} className="btn-primary">
+                      <a
+                        href={primaryButton.href ?? "#"}
+                        target={primaryButton.href?.startsWith("http") ? "_blank" : undefined}
+                        rel={primaryButton.href?.startsWith("http") ? "noopener noreferrer" : undefined}
+                        className="btn-primary"
+                      >
                         <p className="btn-label">{primaryButton.text}</p>
                       </a>
                     )}
                     {secondaryButton && (
-                      <a href={secondaryButton.href ?? "#"} className="btn-secondary border border-border">
+                      <a
+                        href={secondaryButton.href ?? "#"}
+                        target={secondaryButton.href?.startsWith("http") ? "_blank" : undefined}
+                        rel={secondaryButton.href?.startsWith("http") ? "noopener noreferrer" : undefined}
+                        className="btn-secondary border border-border"
+                      >
                         <p className="btn-label">{secondaryButton.text}</p>
                       </a>
                     )}

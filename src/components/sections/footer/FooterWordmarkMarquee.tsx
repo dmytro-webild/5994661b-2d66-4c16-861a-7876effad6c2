@@ -116,7 +116,12 @@ const FooterWordmarkMarquee = ({
                 {column.items.map((item, i) => (
                   <li key={i}>
                     {item.href ? (
-                      <a href={item.href} className="group inline-flex items-center gap-1 font-mono text-[length:var(--text-label)] uppercase tracking-[var(--label-tracking)] [overflow-wrap:anywhere] hover:opacity-70">
+                      <a
+                        href={item.href}
+                        target={item.href.startsWith("http") ? "_blank" : undefined}
+                        rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                        className="group inline-flex items-center gap-1 font-mono text-[length:var(--text-label)] uppercase tracking-[var(--label-tracking)] [overflow-wrap:anywhere] hover:opacity-70"
+                      >
                         <p className="min-w-0">{item.label}</p>
                         <ArrowUpRight aria-hidden="true" className="size-[1em] shrink-0 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                       </a>

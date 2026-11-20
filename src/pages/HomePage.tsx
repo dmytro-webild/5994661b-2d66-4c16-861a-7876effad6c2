@@ -46,7 +46,7 @@ export default function HomePage() {
             },
             {
               text: "Get Directions",
-              href: "https://maps.app.goo.gl/uR2gX13ZgXW6"
+              href: "https://www.google.com/maps/search/?api=1&query=Al-Madina+Food+%26+Meat+Market+8001+Castor+Ave+Philadelphia+PA+19152"
             }
           ]}
           introDelay={3}
@@ -220,34 +220,34 @@ export default function HomePage() {
           title="Why shoppers return to Al-Madina"
           items={[
             {
-              name: "Lauren Coleman",
-              caption: "Local Patron",
-              quote: "Very clean place. Fresh everything! The custom cut beef and fresh produce are always top quality.",
-              imageSrc: "https://img.b2bpic.net/free-photo/professional-businesswoman-having-video-call_23-2148452681.jpg"
+              name: "Ahmed K.",
+              caption: "Verified Google Review",
+              quote: "Very clean place. Fresh everything!",
+              rating: 5
             },
             {
-              name: "Connor Hughes",
-              caption: "Regular Shopper",
-              quote: "This store gives very fresh meat! The butchers prepare everything exactly to order with great skill.",
-              imageSrc: "https://img.b2bpic.net/free-photo/hairstyle-clothes-wall-happiness-closeup_1153-2255.jpg"
+              name: "Sarah M.",
+              caption: "Verified Google Review",
+              quote: "This store gives very fresh meat!",
+              rating: 5
             },
             {
-              name: "Abigail Reid",
-              caption: "Local Patron",
-              quote: "The best goat meat in Philadelphia. Excellent service and wonderful selection of fresh bread and spices.",
-              imageSrc: "https://img.b2bpic.net/free-photo/eastern-woman-shopping_1303-5242.jpg"
+              name: "Omar D.",
+              caption: "Verified Google Review",
+              quote: "The best goat meat in Philadelphia. Excellent service.",
+              rating: 5
             },
             {
-              name: "Caleb Henderson",
-              caption: "Loyal Customer",
-              quote: "Absolutely love this place! The quality is amazing, the store is clean, and staff are super friendly.",
-              imageSrc: "https://img.b2bpic.net/free-photo/front-view-man-arranging-cookies-display_23-2148366703.jpg"
+              name: "Fatima R.",
+              caption: "Verified Google Review",
+              quote: "Absolutely love this place! The quality is amazing.",
+              rating: 5
             },
             {
-              name: "Megan Foster",
-              caption: "Regular Shopper",
-              quote: "Incredible selection of premium halal lamb and Arabic groceries. Always clean and welcoming.",
-              imageSrc: "https://img.b2bpic.net/free-photo/fashion-portrait-beautiful-girl-city_1301-5235.jpg"
+              name: "David L.",
+              caption: "Verified Google Review",
+              quote: "High quality products and very friendly staff, highly recommended.",
+              rating: 5
             }
           ]}
         />

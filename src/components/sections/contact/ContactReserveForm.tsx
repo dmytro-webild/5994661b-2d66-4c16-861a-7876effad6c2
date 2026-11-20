@@ -148,7 +148,7 @@ const ContactReserveForm = ({
               {details.map((line, index) => {
                 if (line.includes("Castor")) {
                   return (
-                    <a key={index} href="https://maps.app.goo.gl/uR2gX13ZgXW6" target="_blank" rel="noopener noreferrer" className="font-mono text-[length:var(--text-label)] uppercase tracking-[var(--label-tracking)] text-foreground hover:text-primary transition-colors">
+                    <a key={index} href="https://www.google.com/maps/search/?api=1&query=Al-Madina+Food+%26+Meat+Market+8001+Castor+Ave+Philadelphia+PA+19152" target="_blank" rel="noopener noreferrer" className="font-mono text-[length:var(--text-label)] uppercase tracking-[var(--label-tracking)] text-foreground hover:text-primary transition-colors">
                       {line} ↗
                     </a>
                   );
